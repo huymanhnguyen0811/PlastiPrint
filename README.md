@@ -1,6 +1,6 @@
 # PlastiPrint — Microplastic Computational Fingerprinting Tool
 
-PlastiPrint is an open-source R Shiny application for chemical fingerprinting of microplastics using machine learning. It wraps the complete computational workflow from the publication (**"Chemical Fingerprints of New vs. Weathered Microplastics: A Machine Learning Approach"**)[https://doi.org/10.1021/acs.est.6c03575] into an interactive GUI with configurable parameters at every step.
+PlastiPrint is an open-source R Shiny application for chemical fingerprinting of microplastics using machine learning. It wraps the complete computational workflow from the publication [**"Chemical Fingerprints of New vs. Weathered Microplastics: A Machine Learning Approach"**](https://doi.org/10.1021/acs.est.6c03575) into an interactive GUI with configurable parameters at every step.
 
 ## Overview
 
