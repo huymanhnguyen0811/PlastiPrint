@@ -1,0 +1,124 @@
+"File","Plastic_type","Category","Polymer","Source","PC1","PC2","UMAP1","UMAP2"
+"USE-01-R1","Polystyrene Food Waste","Food contact material","Polystyrene","Environmental",-4.97842403584624,1.35782295188902,1.052145803778,3.51485742133595
+"USE-01-R2","Polystyrene Food Waste","Food contact material","Polystyrene","Environmental",-4.09649594682977,1.84143636601417,0.845157336245877,3.70117151773466
+"USE-01-R3","Polystyrene Food Waste","Food contact material","Polystyrene","Environmental",-6.18926014752555,0.585607841161457,1.50801451244033,3.46404841300107
+"USE-02-R1","Various Plastic Waste","Mixed plastic waste","Polyethylene; Polyethylene terephthalate; Polypropylene; Polytetrafluoroethylene","Environmental",-4.41477838820035,0.474034660646526,1.22889446059325,2.81775644549992
+"USE-02-R2","Various Plastic Waste","Mixed plastic waste","Polyethylene; Polyethylene terephthalate; Polypropylene; Polytetrafluoroethylene","Environmental",-5.67711175954307,-0.473980629269854,1.59773806141377,2.85338663341654
+"USE-02-R3","Various Plastic Waste","Mixed plastic waste","Polyethylene; Polyethylene terephthalate; Polypropylene; Polytetrafluoroethylene","Environmental",-4.91113349738001,-0.281930693086669,1.38394855880934,2.78481148668584
+"USE-05-R1","Cigarillo Tips","Miscellaneous","Metallised Mylar","Environmental",0.105988849497877,2.59556980914433,-0.22240548241251,3.21833963084133
+"USE-05-R2","Cigarillo Tips","Miscellaneous","Metallised Mylar","Environmental",-0.39215481626397,2.57113964080376,-0.429886235801168,3.29502908169911
+"USE-05-R3","Cigarillo Tips","Miscellaneous","Polyethylene","Environmental",0.205533597351422,1.83249067243925,-0.410822611316766,3.34739321174312
+"USE-06-R1","Textile/Fabric Face Masks","Miscellaneous","Polypropylene","Environmental",-7.76491842968326,-0.843253630554441,2.06974307744124,3.05053549358554
+"USE-06-R2","Textile/Fabric Face Masks","Miscellaneous","Polypropylene","Environmental",-7.10307091227617,-0.529771338510355,1.88668159031422,2.91697606292497
+"USE-06-R3","Textile/Fabric Face Masks","Miscellaneous","Polypropylene","Environmental",-6.11337594088028,0.580111322755304,1.72694463906438,3.01970786945599
+"USE-07-R1","Food Containers","Food contact material","Polyethylene; Polypropylene","Environmental",-2.3803096309525,2.92015297821462,0.0953191986129618,3.42900423924681
+"USE-07-R2","Food Containers","Food contact material","Polyethylene; Polypropylene","Environmental",-1.2727501732544,1.98512826371025,-0.0513769682170431,3.01102132303261
+"USE-07-R3","Food Containers","Food contact material","Polyethylene; Polypropylene","Environmental",-0.276716871296468,1.26925796790924,-0.736888516945711,1.07962180045593
+"USE-09-R1","Food Wrappers","Food contact material","Polypropylene","Environmental",-3.55730234030586,1.9138998994881,0.522405952263587,3.57360943418612
+"USE-09-R2","Food Wrappers","Food contact material","Polypropylene","Environmental",-3.35107655142789,2.99678897616633,0.32061554886631,3.54793572478986
+"USE-09-R3","Food Wrappers","Food contact material","Polypropylene","Environmental",-3.39435268953792,3.60138243482183,0.0709345938256982,3.69250222432072
+"USE-11-R1","Toy Balls","Toys","Rubber","Environmental",-11.1634290420614,-2.28867263171161,2.67234613280598,3.05215597390174
+"USE-11-R2","Toy Balls","Toys","Rubber","Environmental",-9.29822238543062,-1.85752128620236,2.76196972403677,3.19477176384189
+"USE-11-R3","Toy Balls","Toys","Rubber","Environmental",-10.3038187067382,-2.46536844921841,2.68899702423882,3.26207950745629
+"USE-12-R1","Plastic Bags with Locking Zip Mechanism","Miscellaneous","Polyethylene","Environmental",-5.27232614340318,1.91942308170156,0.507207700532608,3.86554603784255
+"USE-12-R2","Plastic Bags with Locking Zip Mechanism","Miscellaneous","Polyethylene","Environmental",-3.93168964888926,2.62397552937655,0.319481725115489,3.77647270826256
+"USE-12-R3","Plastic Bags with Locking Zip Mechanism","Miscellaneous","Polyethylene","Environmental",-5.29678939341625,1.58086176732387,1.08070817973509,3.35298438144492
+"USE-13-R1","Food Packaging","Food contact material","Polypropylene; Rubber","Environmental",-8.35692964116173,0.130720213155314,2.36473222740186,2.95242603795139
+"USE-13-R2","Food Packaging","Food contact material","Polypropylene; Rubber","Environmental",-7.59776014384017,0.450373818518996,2.1655055495871,3.14965786136873
+"USE-13-R3","Food Packaging","Food contact material","Polypropylene; Rubber","Environmental",-7.94615737950597,0.943268751866581,2.25914157922049,2.90832289290606
+"USE-14-R1","Bottle Caps","Plastic bottles and plastic bottle caps","Polyethylene; Polypropylene","Environmental",-1.57673801221175,3.45096610635479,-0.206079490579743,3.53438684452465
+"USE-14-R2","Bottle Caps","Plastic bottles and plastic bottle caps","Polyethylene; Polypropylene","Environmental",-2.40320945918835,3.14917747421722,-0.177913168516307,3.54969539952081
+"USE-14-R3","Bottle Caps","Plastic bottles and plastic bottle caps","Polyethylene; Polypropylene","Environmental",-1.96687920832102,3.24475808023003,-0.144819640770682,3.48645149929683
+"USE-15-R1","Fishing Bait Trays","Miscellaneous","Polystyrene","Environmental",-3.1993923483773,3.60967856390657,-0.0690541276618077,4.08988291817848
+"USE-15-R2","Fishing Bait Trays","Miscellaneous","Polystyrene","Environmental",-3.62091152706945,3.65104672118796,-0.109842654870665,4.03425383319373
+"USE-15-R3","Fishing Bait Trays","Miscellaneous","Polystyrene","Environmental",-3.1822508302742,3.41895619421162,-0.122652441274815,4.04328775857192
+"USSB-03-R1","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",2.08204599118583,-1.12238064152685,-1.80765979707777,-0.43427217502325
+"USSB-03-R2","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",2.22357494396776,-1.099674820677,-1.58817854197662,-0.631205838229914
+"USSB-03-R3","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",2.02072437270211,-0.731120348742619,-1.2749585436273,-0.363694240916965
+"USSB-04-R1","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",6.30777059215023,-1.60951723722407,-0.772581260092968,-3.92995152082694
+"USSB-04-R2","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",6.83246308103749,-1.58311998791581,-0.522103621979276,-4.21140567014411
+"USSB-04-R3","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",6.39936458141384,-1.47489081047123,-0.445829498665054,-4.23950373814846
+"USSB-05-R1","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",7.34927051987398,-3.57175761237668,-0.565122866451564,-4.38847764490818
+"USSB-05-R2","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",6.47582409147346,-1.6540874013655,-0.805234914879511,-4.17892816644474
+"USSB-05-R3","Plastic Cutlery","Food contact material","Polystyrene","Store-Bought",6.19908345862937,-2.17364466547432,-0.765215763580992,-3.83522635407026
+"USSB-08","Plastic Drinking Straws","Food contact material","Polypropylene","Store-Bought",-5.61330385430266,-3.51627461414772,1.86348253594568,2.53180686037255
+"USE-08-R2","Balloons","Toys","Polyethylene terephthalate; Rubber","Environmental",-3.44970986779358,-2.82107050234354,1.45639697503093,1.94565718794495
+"USE-08-R3","Balloons","Toys","Polyethylene terephthalate; Rubber","Environmental",3.66517882182049,-2.99423044243662,-1.37418006673609,-1.78034810826696
+"USE-10-R1","Construction Material","Unlabeled","Rubber","Environmental",-8.89694656124962,-5.01146768114751,2.12701763231565,3.46135553697483
+"USE-10-R2","Construction Material","Unlabeled","Rubber","Environmental",-9.59483012680325,-5.36327726153414,2.37413819682122,3.57734888912813
+"USE-10-R3","Construction Material","Unlabeled","Rubber","Environmental",-8.18883284239282,-3.81390655144357,2.02761711861837,3.54397465411575
+"USSB-11-R1","Balloons","Toys","Rubber","Store-Bought",-0.531574851793099,-1.83959771031433,-1.79289124582437,-0.00989647490956846
+"USSB-11-R2","Balloons","Toys","Rubber","Store-Bought",0.348623934060128,-1.30012921630721,-1.58061674500385,-0.319354120654421
+"USSB-11-R3","Balloons","Toys","Rubber","Store-Bought",0.364833688520056,-1.64901397429548,-1.76938275569198,-0.39756874028449
+"USSB-12","Balloons","Toys","Polyeythlene terephthalate","Store-Bought",3.49828059090435,-4.72121482746972,-1.48289014634394,-1.48187024646521
+"USSB-13","Balloons","Toys","Polyeythlene terephthalate","Store-Bought",1.97623260323648,-3.9199014060133,-1.53754413012202,-1.06563269439077
+"USSB-14","Balloons","Toys","Polyeythlene terephthalate","Store-Bought",1.88766892037021,-2.87530776900292,-1.40369074329361,-1.08003006417945
+"USSB-15-R1","Plastic Plates","Food contact material","Polyeythlene terephthalate","Store-Bought",6.5943349064963,-4.19710662472509,-0.685478918270117,-4.45526622266567
+"USSB-15-R2","Plastic Plates","Food contact material","Polyeythlene terephthalate","Store-Bought",7.64396632452192,-2.07191509407019,-0.8105286239628,-5.07951837579488
+"USSB-15-R3","Plastic Plates","Food contact material","Polyeythlene terephthalate","Store-Bought",7.39686179036668,-2.68709071812331,-0.734201997293669,-4.61593133879032
+"USSB-20-R1","Cigarette Lighters","Unlabeled","Polystyrene","Store-Bought",6.49386812266954,0.101264001511137,-1.15197756042739,-4.09601233888893
+"USSB-20-R2","Cigarette Lighters","Unlabeled","Polystyrene","Store-Bought",6.28893915158635,0.181544856616481,-1.29902082197133,-4.02070494120136
+"USSB-20-R3","Cigarette Lighters","Unlabeled","Polystyrene","Store-Bought",5.40246896359279,-0.0283459434375752,-1.12293152094667,-3.82204853812039
+"USE-21-R1","Plastic Bottles","Plastic bottles and plastic bottle caps","Polyeythlene terephthalate","Environmental",0.0833049966623802,-1.2280547705922,-1.43438343707122,0.0784291524727108
+"USE-21-R2","Plastic Bottles","Plastic bottles and plastic bottle caps","Polyeythlene terephthalate","Environmental",0.185983875175396,-3.02090727986589,-1.54416292666742,-0.137910576693658
+"USE-21-R3","Plastic Bottles","Plastic bottles and plastic bottle caps","Polyeythlene terephthalate","Environmental",-0.170815403875812,-1.38521436197378,-1.27809475790297,-0.0439924283189828
+"USSB-23-R1","Plastic Cord","Unlabeled","Rubber","Store-Bought",-8.1697624600751,-1.5500658364777,2.58819217562032,3.11029093405099
+"USSB-23-R2","Plastic Cord","Unlabeled","Rubber","Store-Bought",-7.68952159210143,-1.31541178081251,2.36857144346365,2.84117949981379
+"USSB-23-R3","Plastic Cord","Unlabeled","Rubber","Store-Bought",-8.14310252555129,-1.26595575230132,2.59960848861841,2.91276674525863
+"USSB-24-R1","Plastic Cord","Unlabeled","Polyeythlene terephthalate","Store-Bought",-2.07310799637083,-0.0653617417382359,-0.778662624741987,0.424163952915862
+"USSB-24-R2","Plastic Cord","Unlabeled","Polyeythlene terephthalate","Store-Bought",-1.33727271058461,0.267274066254892,-0.669145705582409,0.273384495504125
+"USSB-24-R3","Plastic Cord","Unlabeled","Polyeythlene terephthalate","Store-Bought",1.8201629960569,-0.884578864234005,-0.86298119132701,0.0329703887457016
+"USSB-28-R1","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",-0.578530241222755,-2.36578536318893,-1.65253948061778,-0.189784530948912
+"USSB-28-R2","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",-3.11116037062048,-1.46332062161881,0.971837182805152,1.44851218172035
+"USSB-28-R3","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",-0.891553026217822,-2.14247425825889,-1.37611703902104,0.107228052678811
+"USSB-30-R1","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",6.5062508281343,-0.500703745174301,-0.281633223744507,-4.18340147197384
+"USSB-30-R2","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",7.29932116729514,-0.913713324357472,-0.133913909168868,-4.37158754113694
+"USSB-30-R3","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",7.89723394375837,-0.967031514961833,-0.195890789845308,-4.44624359474286
+"USE-04-R1","Plastic Cups","Unlabeled","Polypropylene","Environmental",-0.134457578343862,0.859988520590266,-0.218546808397738,0.388629393479158
+"USE-04-R2","Plastic Cups","Unlabeled","Polypropylene","Environmental",-0.405365141111752,0.856884341349272,-0.289825084039638,0.827462123740763
+"USE-04-R3","Plastic Cups","Unlabeled","Polypropylene","Environmental",-0.196544774846856,0.953480939389426,-0.0830879131261166,0.60934715279896
+"USE-16-R1","Shotgun shells","Unlabeled","Polyethylene","Environmental",-3.21900827815056,-0.216981560433411,0.696588184729157,2.22991703394718
+"USE-16-R2","Shotgun shells","Unlabeled","Polyethylene","Environmental",-3.04326738658709,-0.0214370144111863,0.551916017470217,2.04344754066203
+"USE-16-R3","Shotgun shells","Unlabeled","Polyethylene","Environmental",-3.74240623642802,-1.5380730756464,0.793116169907578,2.31644799657261
+"USE-17-R1","Bottle Caps","Unlabeled","Metallised Mylar","Environmental",-1.09876815267985,1.34289373838243,0.0487856556471051,1.18886622301502
+"USE-17-R2","Bottle Caps","Unlabeled","Metallised Mylar","Environmental",-1.7273241907443,1.20126907034035,-0.130719501737386,1.28680313273246
+"USE-17-R3","Bottle Caps","Unlabeled","Polyethylene","Environmental",-1.25456320430748,1.81835941104554,0.148471402456767,0.798741192038058
+"USE-18-R1","Mixed Plastic (Kamilo Beach)","Unlabeled","Polyethylene; Rubber","Environmental",-2.85285534323006,1.45562271759245,-0.368385898430062,1.73534705351595
+"USE-18-R2","Mixed Plastic (Kamilo Beach)","Unlabeled","Polyethylene; Rubber","Environmental",3.21248020792368,-2.61140168678255,0.155507210510607,-1.06896759084699
+"USE-18-R3","Mixed Plastic (Kamilo Beach)","Unlabeled","Polyethylene; Rubber","Environmental",1.02283720168045,-0.114042023755491,-0.0557944664454453,-0.780781839468762
+"USE-19-R1","Mixed Microplastics","Unlabeled","Polyethylene; Polypropylene","Environmental",2.15477560449472,-1.35242369824292,0.0339640832126762,-1.00820531934384
+"USE-19-R2","Mixed Microplastics","Unlabeled","Polyethylene; Polypropylene","Environmental",-0.619042073670643,-1.77936101446404,0.180755629069171,-0.80026265599286
+"USE-19-R3","Mixed Microplastics","Unlabeled","Polyethylene; Polypropylene","Environmental",-0.742007460929919,-1.79573808019372,0.329604324374158,-0.577578568578808
+"USE-20-R1","Hi Zex Buoy Island","Unlabeled","Polyethylene; Polypropylene; Rubber","Environmental",2.7390478046407,-0.388212889636302,0.373716742362612,-1.11503838112115
+"USE-20-R2","Hi Zex Buoy Island","Unlabeled","Polyethylene; Polypropylene; Rubber","Environmental",1.87518099088251,1.04158880201352,-0.193095552829923,-0.904891794999638
+"USE-20-R3","Hi Zex Buoy Island","Unlabeled","Polyethylene; Polypropylene; Rubber","Environmental",3.43907403891684,-0.217937691891629,0.318189090700624,-1.49318847896382
+"USSB-01-R1","Plastic Cutlery","Unlabeled","Polylactic Acid","Store-Bought",-1.85803758949409,2.17765826350814,0.577864547993549,0.776078798241828
+"USSB-01-R2","Plastic Cutlery","Unlabeled","Polylactic Acid","Store-Bought",-0.944392567452117,1.7722340552353,0.326927235063953,0.856233137184966
+"USSB-01-R3","Plastic Cutlery","Unlabeled","Polylactic Acid","Store-Bought",-1.02595642924345,2.55294366002863,0.558408262145847,0.829114461367019
+"USSB-02-R2","Plastic Cutlery","Unlabeled","Polystyrene","Store-Bought",8.81916260171893,-0.251447158355728,-1.22963724571649,-4.63622597657653
+"USSB-06-R1","Plastic Cutlery","Unlabeled","Polystyrene","Store-Bought",7.55771961256592,0.295799847916203,-1.30574354175122,-4.53388426475497
+"USSB-07-R1","Plastic Drinking Straws","Unlabeled","Polypropylene","Store-Bought",5.21298993503204,-1.94915900938587,-0.672422242934365,-3.93090445532986
+"USSB-10-R1","Balloons","Unlabeled","Rubber","Store-Bought",-4.19664135001608,-0.462664376985158,1.05888050596025,1.92988207662007
+"USSB-10-R2","Balloons","Unlabeled","Rubber","Store-Bought",-3.93841144656329,-0.694568785408952,1.13969812950418,1.70862551261256
+"USSB-16-R1","Plastic Plates","Unlabeled","Polystyrene","Store-Bought",3.51523044093664,1.0174015970364,-0.739624794781429,-2.83220299770748
+"USSB-17-R1","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",4.71761486536878,0.742207781536679,-0.464163451649805,-3.18369147237095
+"USSB-17-R2","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",4.71940915652653,0.718667405603295,-0.493114888203218,-3.27140411476773
+"USSB-17-R3","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",4.2182457703159,2.14011742054347,-0.60442228830223,-3.11617803440305
+"USSB-18-R1","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",-0.59572368170788,2.25019379435261,0.30032160206493,0.59880649930398
+"USSB-18-R2","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",1.06958781188228,2.64844113811555,0.228373622380001,0.622367658760044
+"USSB-19-R1","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",-1.67060943533685,1.75521379233833,0.378105970146015,1.06098187721337
+"USSB-19-R2","Cigarettes","Unlabeled","Cellulose; Polylactic Acid","Store-Bought",-1.13546533190999,1.49969428525993,0.169906844484025,0.883465968963339
+"USSB-21-R1","Cigarette Lighters","Unlabeled","Polystyrene","Store-Bought",6.28237017071739,1.82403834752906,-1.62812134953104,-4.49920827867731
+"USSB-21-R2","Cigarette Lighters","Unlabeled","Polystyrene","Store-Bought",7.25964890811017,2.51398710641578,-1.52648049854928,-4.8201798688439
+"USSB-21-R3","Cigarette Lighters","Unlabeled","Polystyrene","Store-Bought",6.78687187198784,1.80465198751121,-1.72611832877644,-4.46508316499566
+"USSB-22-R1","Cigarette Lighters","Unlabeled","Polytetrafluoroethylene","Store-Bought",6.57492728843756,2.51967581265848,-1.76626279691962,-4.51978768778667
+"USSB-22-R2","Cigarette Lighters","Unlabeled","Polytetrafluoroethylene","Store-Bought",1.84780637763668,2.80720558208979,0.137818048846399,0.0901399498651894
+"USSB-22-R3","Cigarette Lighters","Unlabeled","Polytetrafluoroethylene","Store-Bought",4.13245435031175,2.69968428022312,-1.88747155131932,-4.25983453937429
+"USSB-27-R1","Plastic Cable Ties","Unlabeled","Polyamide","Store-Bought",7.53226829725599,0.845135492597531,-0.338912231685389,-5.15573178558781
+"USSB-27-R2","Plastic Cable Ties","Unlabeled","Polyamide","Store-Bought",7.04085630781409,0.214444605408933,-0.47750169989292,-5.08713596959747
+"USSB-27-R3","Plastic Cable Ties","Unlabeled","Polyamide","Store-Bought",6.68574741700368,-0.109821004498949,-0.320955882402773,-5.26108716508493
+"USSB-31-R1","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",0.790231683911512,1.45210480392896,-0.313879760240841,0.612899840917844
+"USSB-31-R2","Plastic Cups","Unlabeled","Polystyrene","Store-Bought",-0.513911349302219,1.92655411482969,-0.124167342042538,0.688347334831802
+"USSB-40-R1","Plastic Bottles","Unlabeled","Polyeythlene terephthalate","Store-Bought",7.87152577819303,0.640772146731983,-0.975338808048738,-5.27556483843551
+"USSB-40-R2","Plastic Bottles","Unlabeled","Polyeythlene terephthalate","Store-Bought",7.17117742463122,1.58774405357692,-0.994185183017983,-5.12155898682516
+"USSB-40-R3","Plastic Bottles","Unlabeled","Polyeythlene terephthalate","Store-Bought",8.54011781069616,-0.0423811204888012,-0.902948585563818,-5.41275799472449

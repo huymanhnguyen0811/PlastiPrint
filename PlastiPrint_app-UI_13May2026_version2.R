@@ -28,7 +28,9 @@ local({
     # Missing data handling
     "missForest", "pROC", "VIM", "softImpute", "RANN",
     # Parallel processing
-    "foreach", "doParallel", "parallel"
+    "foreach", "doParallel", "parallel",
+    # Dimensionality reduction
+    "umap"
   )
   new <- cran_pkgs[!cran_pkgs %in% installed.packages()[, "Package"]]
   if (length(new)) install.packages(new, repos = "https://cloud.r-project.org")
@@ -74,6 +76,7 @@ suppressPackageStartupMessages({
   library(ggplot2)
   library(moments)
   library(scales)
+  library(umap)
 })
 
 # ── 2.  Source helper functions ───────────────────────────────────────────────
@@ -505,7 +508,8 @@ ui <- dashboardPage(
       menuItem("Step 5 — Labels",   tabName = "step5",    icon = icon("link")),
       menuItem("Step 6 — Features", tabName = "step6",    icon = icon("cut")),
       menuItem("Step 7 — ML",       tabName = "step7",    icon = icon("brain")),
-      menuItem("Step 8 — HCA",      tabName = "step8",    icon = icon("project-diagram"))
+      menuItem("Step 8 — HCA",      tabName = "step8",    icon = icon("project-diagram")),
+      menuItem("Step 9 — PCA/UMAP", tabName = "step9",    icon = icon("circle-nodes"))
     ),
     hr(),
     div(style = "padding: 10px; font-size: 11px; color: #aaa;",
@@ -921,7 +925,12 @@ ui <- dashboardPage(
 
               actionButton("export_all_btn", "Done / Export All",
                            class = "btn-success nav-step-btn",
-                           icon = icon("check-circle"))
+                           icon = icon("check-circle")),
+              hr(),
+
+              actionButton("go_step9", "Next → Step 9",
+                           class = "btn-info nav-step-btn",
+                           icon = icon("arrow-right"))
           ),
           box(width = 8, status = "info", solidHeader = TRUE,
               title = "Output",
@@ -931,6 +940,54 @@ ui <- dashboardPage(
                          plotOutput("step8_dendro", height = "700px")),
                 tabPanel("Console Log",
                          div(class = "log-box", textOutput("step8_log")))
+              )
+          )
+        )
+      ),
+
+      # ────────────────────── STEP 9 — PCA / UMAP ─────────────────────────
+      tabItem("step9",
+        fluidRow(
+          box(width = 4, status = "primary", solidHeader = TRUE,
+              title = "Step 9: PCA & UMAP",
+              p("Projects the train+test data from a Step 7 fold onto PCA and",
+                "UMAP, colored by plastic type (viridis) and shaped by source,",
+                "with hierarchical-cluster boundaries (from the same feature set)",
+                "overlaid on the UMAP as dashed hulls."),
+              hr(),
+
+              h5("Source data from Step 7"),
+              selectInput("pcaumap_dataset", "RF dataset:", choices = NULL),
+              selectInput("pcaumap_fold",    "RF fold:",    choices = NULL),
+              selectInput("pcaumap_feature_set", "Feature set:",
+                          choices = c("All features" = "all_feats",
+                                      "Pairwise"      = "sig",
+                                      "RFA"           = "rfa")),
+              hr(),
+
+              h5("Hierarchical-cluster overlay"),
+              checkboxInput("pcaumap_show_hulls",
+                            "Show HCA cluster hulls on UMAP", value = TRUE),
+              numericInput("pcaumap_hclust_k", "Number of HCA clusters (k):",
+                           value = 6, min = 2, step = 1, width = "60%"),
+              hr(),
+
+              actionButton("run_step9", "Run PCA / UMAP",
+                           class = "btn-primary", icon = icon("play")),
+              hr(),
+
+              downloadButton("pcaumap_download_pca", "Download PCA (PNG)",
+                             class = "btn-warning"),
+              downloadButton("pcaumap_download_umap", "Download UMAP (PNG)",
+                             class = "btn-warning")
+          ),
+          box(width = 8, status = "info", solidHeader = TRUE,
+              title = "Output",
+              tabsetPanel(
+                tabPanel("PCA",  plotOutput("step9_pca_plot",  height = "650px")),
+                tabPanel("UMAP", plotOutput("step9_umap_plot", height = "650px")),
+                tabPanel("Console Log",
+                         div(class = "log-box", textOutput("step9_log")))
               )
           )
         )
@@ -976,6 +1033,8 @@ server <- function(input, output, session) {
     rf_export_dir = NULL,
     # Step 8
     hca_object = NULL, hca_dist = NULL, hca_labels = NULL, hca_ccc = NA,
+    # Step 9
+    step9_pca_plot = NULL, step9_umap_plot = NULL,
 
     # Logs
     log_step1 = "Awaiting input...",
@@ -986,6 +1045,7 @@ server <- function(input, output, session) {
     log_step6 = "Run Step 5 first.",
     log_step7 = "Run Step 6 first.",
     log_step8 = "Run Step 7 first.",
+    log_step9 = "Run Step 7 first.",
     step6_stats_text = ""
   )
 
@@ -1008,6 +1068,15 @@ server <- function(input, output, session) {
   observeEvent(input$go_step6, updateTabItems(session, "main_tabs", "step6"))
   observeEvent(input$go_step7, updateTabItems(session, "main_tabs", "step7"))
   observeEvent(input$go_step8, updateTabItems(session, "main_tabs", "step8"))
+  observeEvent(input$go_step9, updateTabItems(session, "main_tabs", "step9"))
+
+  # ── Helper: strip the redundant standalone word "plastic" from a type label ─
+  clean_plastic_label <- function(x) {
+    x <- gsub("(?i)\\bplastic\\b", "", x, perl = TRUE)
+    x <- trimws(gsub("\\s+", " ", x))
+    ifelse(is.na(x) | x == "", "Unspecified", x)
+  }
+  source_shapes <- c("Environmental" = 17, "Store-Bought" = 16)
 
   # ── Set directory ───────────────────────────────────────────────────────────
   observeEvent(input$set_dir, {
@@ -1963,6 +2032,13 @@ server <- function(input, output, session) {
       folds <- names(rf_results_local[[nm[1]]])
       updateSelectInput(session, "hca_fold", choices = folds, selected = folds[1])
     }
+    # Also populate Step 9 selectors
+    updateSelectInput(session, "pcaumap_dataset", choices = nm, selected = nm[1])
+    if (length(nm)) {
+      folds <- names(rf_results_local[[nm[1]]])
+      updateSelectInput(session, "pcaumap_fold", choices = folds, selected = folds[1])
+    }
+    updateSelectInput(session, "pcaumap_feature_set", choices = method_choices)
   })
 
   # When user changes RF dataset selection, update fold choices
@@ -1977,6 +2053,12 @@ server <- function(input, output, session) {
     if (is.null(nm) || !nzchar(nm) || is.null(rv$rf_results[[nm]])) return()
     folds <- names(rv$rf_results[[nm]])
     updateSelectInput(session, "hca_fold", choices = folds, selected = folds[1])
+  })
+  observeEvent(input$pcaumap_dataset, {
+    nm <- input$pcaumap_dataset
+    if (is.null(nm) || !nzchar(nm) || is.null(rv$rf_results[[nm]])) return()
+    folds <- names(rv$rf_results[[nm]])
+    updateSelectInput(session, "pcaumap_fold", choices = folds, selected = folds[1])
   })
 
   # Render confusion matrix
@@ -2314,6 +2396,163 @@ server <- function(input, output, session) {
     }
     append_log("log_step8", "✓ Export All complete.")
   })
+
+  # ===========================================================================
+  #  STEP 9  —  PCA & UMAP
+  # ===========================================================================
+  observeEvent(input$run_step9, {
+    ds <- input$pcaumap_dataset
+    fd <- input$pcaumap_fold
+    if (is.null(ds) || is.null(fd) || is.null(rv$rf_results[[ds]]) ||
+        is.null(rv$rf_results[[ds]][[fd]])) {
+      rv$log_step9 <- "⚠ No Step 7 result selected. Run Step 7 first."
+      return()
+    }
+    rv$log_step9 <- ""
+    tryCatch({
+      fold_obj <- rv$rf_results[[ds]][[fd]]
+      feat_set <- input$pcaumap_feature_set
+
+      df <- dplyr::bind_rows(fold_obj$final_imp_norm_train,
+                             fold_obj$final_imp_norm_test) %>%
+        dplyr::mutate(Plastic_type = gsub("..", " ", Plastic_type, fixed = TRUE)) %>%
+        dplyr::mutate(Plastic_type = gsub(".",  " ", Plastic_type, fixed = TRUE))
+
+      feats <- switch(feat_set,
+        all_feats = setdiff(names(df), c("Plastic_type","Source","Polymer",
+                                          "technique","Subcategory")),
+        sig       = fold_obj$sig_selected_feats,
+        rfa       = fold_obj$rfa_selected_feats,
+        fold_obj$top_importance_results[[feat_set]]$selected_features)
+      feats <- intersect(feats %||% character(), names(df))
+      if (length(feats) < 2) stop("Fewer than 2 features available for this feature set.")
+
+      hc_df <- df %>% dplyr::select(all_of(feats)) %>% as.data.frame()
+      hc_df[!is.finite(as.matrix(hc_df))] <- 0
+      keep <- rowSums(hc_df, na.rm = TRUE) > 0
+      hc_df_clean <- hc_df[keep, , drop = FALSE]
+      col_var <- apply(hc_df_clean, 2, var, na.rm = TRUE)
+      hc_df_clean <- hc_df_clean[, col_var > 0, drop = FALSE]
+      if (ncol(hc_df_clean) < 2) stop("Fewer than 2 non-constant features remain.")
+      if (nrow(hc_df_clean) < 4) stop("Fewer than 4 samples remain after cleaning.")
+
+      Type <- clean_plastic_label(df$Plastic_type[keep])
+      Source <- df$Source[keep]
+      top_types <- names(sort(table(Type), decreasing = TRUE))[1:min(9, length(unique(Type)))]
+      TypePlot <- ifelse(Type %in% top_types, Type, "Other")
+
+      append_log("log_step9", sprintf("── PCA/UMAP: %s / %s (features=%s) ──", ds, fd, feat_set))
+      append_log("log_step9", sprintf("   %d samples, %d features", nrow(hc_df_clean), ncol(hc_df_clean)))
+
+      pca <- prcomp(hc_df_clean, center = TRUE, scale. = TRUE)
+      ve <- (pca$sdev^2 / sum(pca$sdev^2))[1:2] * 100
+      append_log("log_step9", sprintf("   PCA: PC1+PC2 = %.1f%% + %.1f%% = %.1f%%", ve[1], ve[2], sum(ve)))
+
+      n_neighbors <- min(15, nrow(hc_df_clean) - 1)
+      if (n_neighbors < 2) stop("Not enough samples for UMAP (need >= 3).")
+      set.seed(123)
+      umap_cfg <- umap.defaults
+      umap_cfg$n_neighbors <- n_neighbors
+      umap_cfg$random_state <- 123
+      umap_fit <- umap(scale(hc_df_clean), config = umap_cfg)
+
+      k <- max(2, min(round(input$pcaumap_hclust_k), nrow(hc_df_clean) - 1))
+      dist_label <- "Robust Aitchison"
+      hca_dist <- tryCatch({
+        if (any(hc_df_clean <= 0)) stop("non-positive values")
+        vegan::vegdist(hc_df_clean, method = "robust.aitchison")
+      }, error = function(e) {
+        dist_label <<- "Euclidean (fallback)"
+        dist(scale(hc_df_clean), method = "euclidean")
+      })
+      hclust_obj <- hclust(hca_dist, method = "average")
+      hclusters <- cutree(hclust_obj, k = k)
+      append_log("log_step9", sprintf("   HCA overlay: %s distance, average linkage, k=%d clusters", dist_label, k))
+
+      plot_meta <- data.frame(Type = Type, TypePlot = TypePlot, Source = Source,
+                              HCluster = factor(hclusters))
+      pca_df  <- cbind(plot_meta, PC1 = pca$x[, 1], PC2 = pca$x[, 2])
+      umap_df <- cbind(plot_meta, UMAP1 = umap_fit$layout[, 1], UMAP2 = umap_fit$layout[, 2])
+
+      p_pca <- ggplot(pca_df, aes(PC1, PC2, color = TypePlot, shape = Source)) +
+        geom_point(size = 2.5, alpha = 0.85) +
+        scale_color_viridis_d() +
+        scale_shape_manual(values = source_shapes) +
+        labs(title = sprintf("PCA — %s / %s (%s)", ds, fd, feat_set),
+             x = sprintf("PC1 (%.1f%%)", ve[1]), y = sprintf("PC2 (%.1f%%)", ve[2]),
+             color = "Type") +
+        theme_minimal(base_size = 13)
+
+      p_umap <- ggplot(umap_df, aes(UMAP1, UMAP2))
+      if (isTRUE(input$pcaumap_show_hulls)) {
+        p_umap <- p_umap +
+          ggforce::geom_mark_hull(aes(group = HCluster), fill = "grey50", alpha = 0.08,
+                                   color = "grey40", linetype = 2,
+                                   expand = unit(3, "mm"), radius = unit(2, "mm"),
+                                   concavity = 2.5)
+      }
+      p_umap <- p_umap +
+        geom_point(aes(color = TypePlot, shape = Source), size = 2.5, alpha = 0.9) +
+        scale_color_viridis_d() +
+        scale_shape_manual(values = source_shapes) +
+        labs(title = sprintf("UMAP — %s / %s (%s)%s", ds, fd, feat_set,
+                              if (isTRUE(input$pcaumap_show_hulls))
+                                sprintf(" | HCA k=%d hulls", k) else ""),
+             color = "Type") +
+        theme_minimal(base_size = 13)
+
+      rv$step9_pca_plot <- p_pca
+      rv$step9_umap_plot <- p_umap
+      append_log("log_step9", "✓ PCA/UMAP complete.")
+    },
+    error = function(e) append_log("log_step9", paste("✗ ERROR:", conditionMessage(e))))
+  })
+
+  output$step9_log <- renderText(rv$log_step9)
+
+  output$step9_pca_plot <- renderPlot({
+    if (is.null(rv$step9_pca_plot)) {
+      plot.new(); title(main = "Click 'Run PCA / UMAP' to generate plots")
+      return()
+    }
+    rv$step9_pca_plot
+  })
+
+  output$step9_umap_plot <- renderPlot({
+    if (is.null(rv$step9_umap_plot)) {
+      plot.new(); title(main = "Click 'Run PCA / UMAP' to generate plots")
+      return()
+    }
+    rv$step9_umap_plot
+  })
+
+  output$pcaumap_download_pca <- downloadHandler(
+    filename = function() {
+      paste0("PlastiPrint_PCA_", input$pcaumap_dataset, "_", input$pcaumap_fold,
+             "_", format(Sys.time(), "%Y%m%d_%H%M%S"), ".png")
+    },
+    content = function(file) {
+      if (is.null(rv$step9_pca_plot)) {
+        png(file, width = 1200, height = 700); plot.new(); title(main = "No PCA result"); dev.off()
+        return()
+      }
+      ggsave(file, rv$step9_pca_plot, width = 8.5, height = 5.5, dpi = 150)
+    }
+  )
+
+  output$pcaumap_download_umap <- downloadHandler(
+    filename = function() {
+      paste0("PlastiPrint_UMAP_", input$pcaumap_dataset, "_", input$pcaumap_fold,
+             "_", format(Sys.time(), "%Y%m%d_%H%M%S"), ".png")
+    },
+    content = function(file) {
+      if (is.null(rv$step9_umap_plot)) {
+        png(file, width = 1200, height = 700); plot.new(); title(main = "No UMAP result"); dev.off()
+        return()
+      }
+      ggsave(file, rv$step9_umap_plot, width = 9.5, height = 5.5, dpi = 150)
+    }
+  )
 
 } # end server
 

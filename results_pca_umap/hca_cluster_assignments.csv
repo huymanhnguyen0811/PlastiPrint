@@ -1,0 +1,124 @@
+"File","Type","Source","cluster_k9"
+"USE-01-R1","Polystyrene Food Waste","Environmental",1
+"USE-01-R2","Polystyrene Food Waste","Environmental",1
+"USE-01-R3","Polystyrene Food Waste","Environmental",1
+"USE-02-R1","Various Waste","Environmental",1
+"USE-02-R2","Various Waste","Environmental",1
+"USE-02-R3","Various Waste","Environmental",1
+"USE-05-R1","Cigarillo Tips","Environmental",1
+"USE-05-R2","Cigarillo Tips","Environmental",1
+"USE-05-R3","Cigarillo Tips","Environmental",1
+"USE-06-R1","Textile/Fabric Face Masks","Environmental",1
+"USE-06-R2","Textile/Fabric Face Masks","Environmental",1
+"USE-06-R3","Textile/Fabric Face Masks","Environmental",1
+"USE-07-R1","Food Containers","Environmental",1
+"USE-07-R2","Food Containers","Environmental",1
+"USE-07-R3","Food Containers","Environmental",1
+"USE-09-R1","Food Wrappers","Environmental",1
+"USE-09-R2","Food Wrappers","Environmental",1
+"USE-09-R3","Food Wrappers","Environmental",1
+"USE-11-R1","Toy Balls","Environmental",2
+"USE-11-R2","Toy Balls","Environmental",2
+"USE-11-R3","Toy Balls","Environmental",2
+"USE-12-R1","Bags with Locking Zip Mechanism","Environmental",1
+"USE-12-R2","Bags with Locking Zip Mechanism","Environmental",1
+"USE-12-R3","Bags with Locking Zip Mechanism","Environmental",1
+"USE-13-R1","Food Packaging","Environmental",1
+"USE-13-R2","Food Packaging","Environmental",1
+"USE-13-R3","Food Packaging","Environmental",1
+"USE-14-R1","Bottle Caps","Environmental",1
+"USE-14-R2","Bottle Caps","Environmental",1
+"USE-14-R3","Bottle Caps","Environmental",1
+"USE-15-R1","Fishing Bait Trays","Environmental",1
+"USE-15-R2","Fishing Bait Trays","Environmental",1
+"USE-15-R3","Fishing Bait Trays","Environmental",1
+"USSB-03-R1","Cutlery","Store-Bought",3
+"USSB-03-R2","Cutlery","Store-Bought",3
+"USSB-03-R3","Cutlery","Store-Bought",3
+"USSB-04-R1","Cutlery","Store-Bought",3
+"USSB-04-R2","Cutlery","Store-Bought",3
+"USSB-04-R3","Cutlery","Store-Bought",3
+"USSB-05-R1","Cutlery","Store-Bought",3
+"USSB-05-R2","Cutlery","Store-Bought",3
+"USSB-05-R3","Cutlery","Store-Bought",3
+"USSB-08","Drinking Straws","Store-Bought",1
+"USE-08-R2","Balloons","Environmental",1
+"USE-08-R3","Balloons","Environmental",3
+"USE-10-R1","Construction Material","Environmental",4
+"USE-10-R2","Construction Material","Environmental",4
+"USE-10-R3","Construction Material","Environmental",4
+"USSB-11-R1","Balloons","Store-Bought",1
+"USSB-11-R2","Balloons","Store-Bought",1
+"USSB-11-R3","Balloons","Store-Bought",1
+"USSB-12","Balloons","Store-Bought",5
+"USSB-13","Balloons","Store-Bought",5
+"USSB-14","Balloons","Store-Bought",5
+"USSB-15-R1","Plates","Store-Bought",5
+"USSB-15-R2","Plates","Store-Bought",5
+"USSB-15-R3","Plates","Store-Bought",5
+"USSB-20-R1","Cigarette Lighters","Store-Bought",3
+"USSB-20-R2","Cigarette Lighters","Store-Bought",3
+"USSB-20-R3","Cigarette Lighters","Store-Bought",3
+"USE-21-R1","Bottles","Environmental",5
+"USE-21-R2","Bottles","Environmental",5
+"USE-21-R3","Bottles","Environmental",5
+"USSB-23-R1","Cord","Store-Bought",1
+"USSB-23-R2","Cord","Store-Bought",1
+"USSB-23-R3","Cord","Store-Bought",1
+"USSB-24-R1","Cord","Store-Bought",5
+"USSB-24-R2","Cord","Store-Bought",5
+"USSB-24-R3","Cord","Store-Bought",5
+"USSB-28-R1","Cups","Store-Bought",3
+"USSB-28-R2","Cups","Store-Bought",3
+"USSB-28-R3","Cups","Store-Bought",3
+"USSB-30-R1","Cups","Store-Bought",3
+"USSB-30-R2","Cups","Store-Bought",3
+"USSB-30-R3","Cups","Store-Bought",3
+"USE-04-R1","Cups","Environmental",6
+"USE-04-R2","Cups","Environmental",6
+"USE-04-R3","Cups","Environmental",6
+"USE-16-R1","Shotgun shells","Environmental",7
+"USE-16-R2","Shotgun shells","Environmental",7
+"USE-16-R3","Shotgun shells","Environmental",7
+"USE-17-R1","Bottle Caps","Environmental",6
+"USE-17-R2","Bottle Caps","Environmental",6
+"USE-17-R3","Bottle Caps","Environmental",6
+"USE-18-R1","Mixed (Kamilo Beach)","Environmental",6
+"USE-18-R2","Mixed (Kamilo Beach)","Environmental",8
+"USE-18-R3","Mixed (Kamilo Beach)","Environmental",6
+"USE-19-R1","Mixed Microplastics","Environmental",7
+"USE-19-R2","Mixed Microplastics","Environmental",7
+"USE-19-R3","Mixed Microplastics","Environmental",7
+"USE-20-R1","Hi Zex Buoy Island","Environmental",8
+"USE-20-R2","Hi Zex Buoy Island","Environmental",1
+"USE-20-R3","Hi Zex Buoy Island","Environmental",7
+"USSB-01-R1","Cutlery","Store-Bought",6
+"USSB-01-R2","Cutlery","Store-Bought",6
+"USSB-01-R3","Cutlery","Store-Bought",6
+"USSB-02-R2","Cutlery","Store-Bought",3
+"USSB-06-R1","Cutlery","Store-Bought",3
+"USSB-07-R1","Drinking Straws","Store-Bought",3
+"USSB-10-R1","Balloons","Store-Bought",1
+"USSB-10-R2","Balloons","Store-Bought",1
+"USSB-16-R1","Plates","Store-Bought",3
+"USSB-17-R1","Cigarettes","Store-Bought",6
+"USSB-17-R2","Cigarettes","Store-Bought",6
+"USSB-17-R3","Cigarettes","Store-Bought",6
+"USSB-18-R1","Cigarettes","Store-Bought",6
+"USSB-18-R2","Cigarettes","Store-Bought",6
+"USSB-19-R1","Cigarettes","Store-Bought",6
+"USSB-19-R2","Cigarettes","Store-Bought",6
+"USSB-21-R1","Cigarette Lighters","Store-Bought",3
+"USSB-21-R2","Cigarette Lighters","Store-Bought",3
+"USSB-21-R3","Cigarette Lighters","Store-Bought",3
+"USSB-22-R1","Cigarette Lighters","Store-Bought",3
+"USSB-22-R2","Cigarette Lighters","Store-Bought",3
+"USSB-22-R3","Cigarette Lighters","Store-Bought",3
+"USSB-27-R1","Cable Ties","Store-Bought",9
+"USSB-27-R2","Cable Ties","Store-Bought",9
+"USSB-27-R3","Cable Ties","Store-Bought",9
+"USSB-31-R1","Cups","Store-Bought",3
+"USSB-31-R2","Cups","Store-Bought",3
+"USSB-40-R1","Bottles","Store-Bought",5
+"USSB-40-R2","Bottles","Store-Bought",5
+"USSB-40-R3","Bottles","Store-Bought",5
